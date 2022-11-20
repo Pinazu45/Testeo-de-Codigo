@@ -47,4 +47,29 @@ public class Agenda
         } catch (Exception e) {
             System.out.println("Se encontro un error");
         }
+        public void BuscarF()
+        {
+            final String SEPARATOR = ", ";
+            BufferedReader br = null; //Buffer para almacenar linea completo
+            try
+            {
+                File archivo = new File(FILE_NAME);
+                if(archivo.exists()) {
+                    br = new BufferedReader(new FileReader(FILE_NAME));
+                    String[] fields;
+                    String line = br.readLine();
+                    boolean encontrar = false;
+                    String nombre = JOptionPane.showInputDialog(null, "Nombre a buscar");
+
+                    if(br != null)
+                    {
+                        br.close();
+                    }
+                } else {
+                    System.out.print("Archivo inexistente");
+                }
+            } catch (Exception e) {
+                System.out.println("Se encontro un error");
+            }
+        }
 }
