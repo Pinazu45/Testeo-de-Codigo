@@ -80,7 +80,7 @@ public class Agenda
                     System.out.print("Archivo inexistente");
                 }
             } catch (Exception e) {
-                System.out.println("Se encontro un error");
+                System.out.println("No se hallo el archivo o hubo un error");
             }
         }
 }
