@@ -10,11 +10,11 @@ public class AppAgenda
             op = JOptionPane.showInputDialog(null, mn).charAt(0);
             switch(op)
             {
-                case '1' :
+                case '1' : agenda.fichero();
                     break;
-                case '2' :
+                case '2' : agenda.ImprimirF();
                     break;
-                case '3' :
+                case '3' : agenda.BuscarF();
                     break;
                 case '4' : JOptionPane.showMessageDialog(null, "Salida");
                     break;
