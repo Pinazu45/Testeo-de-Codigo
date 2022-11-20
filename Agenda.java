@@ -21,4 +21,30 @@ public class Agenda
             System.out.println("Se encontro un error");
         }
     }
+    public void ImprimirF()
+    {
+        final String SEPARATOR = ", ";
+        BufferedReader br = null; //Buffer para almacenar linea completo
+        try
+        {
+            File archivo = new File(FILE_NAME);
+            if(archivo.exists()) {
+                br = new BufferedReader(new FileReader(FILE_NAME));
+                String line = br.readLine();
+                while(line != null)
+                {
+                    String[] fields = line.split(SEPARATOR);
+                    System.out.println(Arrays.toString(fields));
+                    line = br.readLine();
+                }
+                if(br != null)
+                {
+                    br.close();
+                }
+            } else {
+                System.out.print("Archivo inexistente");
+            }
+        } catch (Exception e) {
+            System.out.println("Se encontro un error");
+        }
 }
