@@ -60,7 +60,18 @@ public class Agenda
                     String line = br.readLine();
                     boolean encontrar = false;
                     String nombre = JOptionPane.showInputDialog(null, "Nombre a buscar");
-
+                    while(line != null && ! encontrar)
+                    {
+                        fields = line.split(SEPARATOR);
+                        line = br.readLine();
+                        if(fields[0].equals(nombre))
+                        {
+                            encontrar = true;
+                            System.out.println(Arrays.toString(fields) + "\nSe encontro");
+                        } else {
+                            System.out.println("No se encontro\n");
+                        }
+                    }
                     if(br != null)
                     {
                         br.close();
